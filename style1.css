@@ -1,0 +1,275 @@
+:root {
+  --maroon: #681717;
+  --charcoal: #333333;
+  --border-gray: #d1d5db;
+  --progress-bg: #d9d9d9;
+  --text-dark: #1a1a1a;
+  --text-body: #2b2b2b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  color: var(--text-body);
+  line-height: 1.45;
+}
+
+.resume-container {
+  width: 210mm;
+  min-height: 297mm;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Left Sidebar */
+.sidebar {
+  padding: 32px 20px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.photo-box {
+  width: 170px;
+  height: 170px;
+  border: 2px solid var(--maroon);
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.72rem;
+}
+
+.contact-table tr {
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.contact-table tr:first-child {
+  border-top: 1px solid var(--border-gray);
+}
+
+.contact-table td {
+  padding: 6px 4px;
+  vertical-align: middle;
+}
+
+.contact-icon {
+  background-color: var(--maroon);
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 0 !important;
+}
+
+.contact-icon i {
+  display: inline-block;
+  line-height: 24px;
+}
+
+.contact-detail {
+  padding-left: 8px !important;
+  word-break: break-word;
+  color: var(--text-dark);
+}
+
+.sidebar-section-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--charcoal);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+.edu-degree {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.edu-school,
+.edu-meta {
+  font-size: 0.72rem;
+  color: var(--text-body);
+  line-height: 1.35;
+}
+
+.edu-gpa {
+  list-style-type: disc;
+  margin-top: 6px;
+  padding-left: 14px;
+  font-size: 0.75rem;
+  color: var(--text-dark);
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-header {
+  background-color: var(--maroon);
+  padding: 24px 28px 18px;
+  border-bottom: 12px solid var(--charcoal);
+}
+
+.banner-header h1 {
+  color: #ffffff;
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.content-body {
+  padding: 24px 32px 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+section {
+  width: 100%;
+}
+
+.section-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--charcoal);
+  padding-bottom: 3px;
+  margin-bottom: 8px;
+}
+
+.summary-text,
+.objective-text {
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--text-body);
+  text-align: justify;
+}
+
+.objective-text {
+  font-weight: 600;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 4px;
+  padding-left: 16px;
+  list-style-type: disc;
+}
+
+.skills-grid li {
+  font-size: 0.74rem;
+  color: var(--text-body);
+}
+
+/* Language Proficiency */
+.languages-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 10px;
+}
+
+.lang-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lang-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.lang-bar {
+  width: 100%;
+  height: 6px;
+  background-color: var(--progress-bg);
+  position: relative;
+}
+
+.lang-fill {
+  height: 100%;
+  background-color: var(--maroon);
+}
+
+.lang-label {
+  font-size: 0.7rem;
+  color: var(--text-body);
+}
+
+/* General Bullet Lists */
+.custom-list {
+  padding-left: 16px;
+  list-style-type: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.custom-list li {
+  font-size: 0.74rem;
+  line-height: 1.35;
+  color: var(--text-body);
+}
+
+/* Print export settings */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  body {
+    background: transparent;
+    padding: 0;
+  }
+  .resume-container {
+    box-shadow: none;
+    width: 210mm;
+    height: 297mm;
+  }
+}
